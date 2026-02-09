@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arvind Swami Ganeshan - Data Engineer & GRC Specialist. 5+ years at BNP Paribas & Thomson Reuters. UK Permanent Resident. Available immediately.">
+    <title>Arvind Swami Ganeshan | Data Engineer & GRC Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #0a2540;
+            --navy-light: #1a5276;
+            --accent: #3498db;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --bg: #f4f6f7;
+            --white: #ffffff;
+            --border: #e5e8e8;
+            --success: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--navy);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--navy);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--navy);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            font-size: 0.95rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--navy);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            border: 2px solid rgba(255,255,255,0.5);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--navy);
+            border-color: white;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            border-bottom: 3px solid var(--navy);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--navy);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-box strong {
+            color: var(--navy);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-top: 3px solid var(--navy);
+        }
+
+        .skill-card h3 {
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--bg);
+            color: var(--text);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--navy);
+            color: white;
+            border-color: var(--navy);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--navy), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 2.2rem;
+            width: 12px;
+            height: 12px;
+            background: var(--navy);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--navy);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .timeline-company {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .timeline-item ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border);
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            background: var(--navy);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-org {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-desc {
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-impact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #e8f5e9;
+            color: var(--success);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .project-tech {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-pill {
+            background: var(--bg);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--navy);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-section .section-title {
+            color: white;
+            border-bottom-color: var(--accent);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .contact-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #051830;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                gap: 1.5rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+                margin-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: -1.9rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                background: var(--navy) !important;
+                -webkit-print-color-adjust: exact;
+            }
+            .project-header {
+                background: var(--navy) !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">ASG.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Arvind_Ganeshan_Data_Engineer.pdf" download style="color: var(--navy); font-weight: 700;">Download CV</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="availability-badge">
+                <i class="fas fa-bolt"></i>
+                UK Permanent Resident • Available for Immediate Start
+            </div>
+            
+            <h1>Arvind Swami Ganeshan</h1>
+            <div class="subtitle">Data Engineer & Governance Specialist</div>
+            
+            <p class="hero-tagline">
+                5+ years architecting enterprise data pipelines and GRC frameworks at <strong>BNP Paribas</strong> and <strong>Thomson Reuters</strong>. I build automation that saves 180+ engineering hours and ensure 100% compliance across 4,000+ servers.
+            </p>
+            
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Church Stretton, UK (Open to Relocation)</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-phone"></i>
+                    <span>07767 978917</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>arvindswami014@gmail.com</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/arvindswami014" style="color: white; text-decoration: underline;">LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Hire Me Now
+                </a>
+                <a href="Arvind_Ganeshan_Data_Engineer.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Download CV (PDF)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">Professional Profile</h2>
+            <p class="section-subtitle">Data engineering professional with expertise in automation, governance, and compliance</p>
+        </div>
+        
+        <div class="about-content">
+            <p>
+                Results-driven Data Engineer with 5+ years transforming enterprise data operations within global financial services. I specialise in turning complex data pipelines into fast, reliable infrastructure—whether that's cutting deployment times by <strong>85%</strong> or resolving <strong>3,000+ incidents</strong> without breaking stride.
+            </p>
+            <p style="margin-top: 1rem;">
+                Currently completing the <strong>IBM Data Engineering & Generative AI Professional Certificate</strong> (90% complete), bridging cutting-edge AI skills with enterprise data governance. As a UK Permanent Resident with immediate availability, I am seeking Data Engineer or GRC roles where I can deliver immediate technical impact.
+            </p>
+            
+            <div class="highlight-grid">
+                <div class="highlight-box">
+                    <strong>Current Status</strong>
+                    Assistant Manager (Bridging Role)<br>
+                    Completing IBM Certification
+                </div>
+                <div class="highlight-box">
+                    <strong>Right to Work</strong>
+                    UK Permanent Resident<br>
+                    No Sponsorship Required
+                </div>
+                <div class="highlight-box">
+                    <strong>Availability</strong>
+                    Immediate Start<br>
+                    Open to UK-Wide Relocation
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-subtitle">Core competencies in data engineering, cloud, and governance</p>
+        </div>
+        
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3><i class="fas fa-database"></i> Data Engineering</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Python (Pandas, NumPy)</span>
+                    <span class="skill-tag">SQL (Advanced)</span>
+                    <span class="skill-tag">Oracle PL/SQL</span>
+                    <span class="skill-tag">ETL/ELT Pipelines</span>
+                    <span class="skill-tag">Apache Airflow</span>
+                    <span class="skill-tag">Apache Spark</span>
+                    <span class="skill-tag">Apache Kafka</span>
+                    <span class="skill-tag">Data Warehousing</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Microsoft Azure</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Ansible Automation</span>
+                    <span class="skill-tag">Unix/Linux</span>
+                    <span class="skill-tag">ServiceNow</span>
+                    <span class="skill-tag">Jira</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3><i class="fas fa-shield-alt"></i> Governance & Security</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Data Governance</span>
+                    <span class="skill-tag">GRC Frameworks</span>
+                    <span class="skill-tag">NIST</span>
+                    <span class="skill-tag">ISO 27001</span>
+                    <span class="skill-tag">GDPR</span>
+                    <span class="skill-tag">Data Protection Act 2018</span>
+                    <span class="skill-tag">Vulnerability Management</span>
+                    <span class="skill-tag">Log4j Remediation</span>
+                </div>
+            </div>
+            
+            <div class="skill-card">
+                <h3><i class="fas fa-users"></i> Methodologies</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Agile/Scrum</span>
+                    <span class="skill-tag">ITIL</span>
+                    <span class="skill-tag">Change Management</span>
+                    <span class="skill-tag">Stakeholder Management</span>
+                    <span class="skill-tag">Technical Leadership</span>
+                    <span class="skill-tag">Incident Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">5+ years in financial services data engineering and governance</p>
+        </div>
+        
+        <div class="timeline">
+            <!-- BNP Paribas -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Data Infrastructure Specialist</div>
+                        <div class="timeline-company">BNP Paribas — London, UK</div>
+                    </div>
+                    <div class="timeline-date">Oct 2022 – Sep 2023</div>
+                </div>
+                <ul>
+                    <li>Architected <strong>IVELO</strong>, a Python/Ansible automation platform achieving <strong>85% deployment time reduction</strong> (8hrs → 1.5hrs), saving 180+ engineering hours across 30+ releases and 30,000+ server deployments</li>
+                    <li>Built 50+ monitoring dashboards (Dynatrace/Geneos) for 4,000+ servers and 50+ applications, delivering 25% performance improvement and proactive incident detection</li>
+                    <li>Led global File Integrity Monitoring rollout across APAC, EMEA, and NAR regions, attaining <strong>100% compliance</strong> with ISO 27001/NIST and zero audit findings</li>
+                    <li>Managed technical team of 7, mentoring 4 engineers and presenting infrastructure strategy to VP-level stakeholders</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Python, Ansible, Oracle, SQL, Azure, ServiceNow, Dynatrace, Geneos
+                </div>
+            </div>
+
+            <!-- Infosys UK -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Systems Engineer / Data Operations</div>
+                        <div class="timeline-company">Infosys Limited (Client: Thomson Reuters) — UK</div>
+                    </div>
+                    <div class="timeline-date">Sep 2021 – Sep 2022</div>
+                </div>
+                <ul>
+                    <li>Resolved <strong>3,000+ incidents</strong> including 50+ P1 critical escalations, maintaining 99.9% SLA compliance for enterprise legal data platforms</li>
+                    <li>Coordinated emergency <strong>Log4j security remediation</strong> across 20 Java applications, implementing GDPR-compliant database hardening under tight deadlines</li>
+                    <li>Maintained biweekly data release cadence using CI/CD pipelines (Jenkins, Git) and ITIL-aligned ServiceNow workflows</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Java, Oracle, SQL, Git, Jenkins, ServiceNow, Jira
+                </div>
+            </div>
+
+            <!-- Infosys India Senior -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Senior Operations Executive / Database Developer</div>
+                        <div class="timeline-company">Infosys Limited (Client: Thomson Reuters) — India</div>
+                    </div>
+                    <div class="timeline-date">Sep 2020 – Sep 2021</div>
+                </div>
+                <ul>
+                    <li>Executed <strong>zero-downtime Oracle migration (10g → 19c)</strong> for critical legal databases, ensuring zero data loss and 99.9% accuracy through PL/SQL stored procedures, triggers, and audit functions</li>
+                    <li>Automated 40% of data validation processes using Gherkin/TestComplete frameworks, reducing post-deployment incidents by 20%</li>
+                    <li>Developed complex PL/SQL ETL procedures for high-volume data extraction, transformation, and loading operations</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Oracle, PL/SQL, Java, TestComplete, Gherkin
+                </div>
+            </div>
+
+            <!-- Infosys India Junior -->
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Operations Executive / Data Processing</div>
+                        <div class="timeline-company">Infosys Limited (Client: Thomson Reuters) — India</div>
+                    </div>
+                    <div class="timeline-date">Sep 2018 – Sep 2020</div>
+                </div>
+                <ul>
+                    <li>Developed <strong>Perl and Shell scripting automation</strong> for XML data pipelines, reducing processing time by 30%</li>
+                    <li>Managed Unix/Linux release cycles and ETL workflows during Mainframe-to-modern platform transition</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Perl, Shell Scripting, XML, ETL, Unix/Linux
+                </div>
+            </div>
+
+            <!-- Current Bridging Role -->
+            <div class="timeline-item" style="opacity: 0.9;">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">Assistant Manager (Bridging Role)</div>
+                        <div class="timeline-company">Premier Convenience Store — Church Stretton, UK</div>
+                    </div>
+                    <div class="timeline-date">Oct 2024 – Present</div>
+                </div>
+                <p style="color: var(--text-light); font-style: italic;">
+                    Strategic bridging role while completing IBM Data Engineering certification. Applying data analysis and financial compliance skills to inventory optimization and zero-discrepancy financial reporting. Demonstrating adaptability and continuous professional development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <h2 class="section-title">Key Projects</h2>
+            <p class="section-subtitle">Enterprise-scale data engineering with measurable business impact</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">IVELO Data Pipeline Platform</div>
+                    <div class="project-org">BNP Paribas</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-desc">
+                        Enterprise-scale automation platform orchestrating mass data deployments using Python and Ansible playbooks. Integrated Oracle validation and monitoring systems for 30,000+ server estate.
+                    </p>
+                    <div class="project-impact">
+                        <i class="fas fa-chart-line"></i>
+                        85% time reduction • 180+ hours saved quarterly
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Ansible</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">Azure</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Global Data Compliance Infrastructure</div>
+                    <div class="project-org">BNP Paribas</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-desc">
+                        Implemented File Integrity Monitoring and data governance controls across 4,000+ servers in APAC, EMEA, and NAR regions. Ensured adherence to NIST and ISO 27001 frameworks.
+                    </p>
+                    <div class="project-impact">
+                        <i class="fas fa-check-circle"></i>
+                        100% compliance • Zero audit findings
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">Newtrix</span>
+                        <span class="tech-pill">Dynatrace</span>
+                        <span class="tech-pill">ISO 27001</span>
+                        <span class="tech-pill">GRC</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Oracle Enterprise Migration Framework</div>
+                    <div class="project-org">Thomson Reuters</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-desc">
+                        Zero-downtime migration framework for Oracle 10g to 19c upgrade across critical legal databases. Implemented automated validation procedures and audit logging architecture.
+                    </p>
+                    <div class="project-impact">
+                        <i class="fas fa-database"></i>
+                        Zero data loss • 99.9% accuracy
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">Oracle</span>
+                        <span class="tech-pill">PL/SQL</span>
+                        <span class="tech-pill">ETL</span>
+                        <span class="tech-pill">Gherkin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Digital Twin Security Research</div>
+                    <div class="project-org">Cranfield University (MSc Dissertation)</div>
+                </div>
+                <div class="project-body">
+                    <p class="project-desc">
+                        Research on secure data exchange using NIST and ISO 27001 frameworks for Digital Twin applications in cybersecurity contexts.
+                    </p>
+                    <div class="project-impact">
+                        <i class="fas fa-graduation-cap"></i>
+                        MSc Distinction Level Research
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-pill">NIST Framework</span>
+                        <span class="tech-pill">ISO 27001</span>
+                        <span class="tech-pill">Cybersecurity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certs -->
+    <section id="education">
+        <div class="section-header">
+            <h2 class="section-title">Education & Certifications</h2>
+        </div>
+        
+        <div class="timeline" style="padding-left: 0;">
+            <div class="timeline-item" style="border-left: 4px solid var(--navy); padding-left: 2rem;">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">MSc Management and Information Systems</div>
+                        <div class="timeline-company">Cranfield University, UK</div>
+                    </div>
+                    <div class="timeline-date">Sep 2024</div>
+                </div>
+                <p style="margin-top: 0.5rem; color: var(--text-light); font-style: italic;">
+                    Dissertation: Digital Twin Applications for Cybersecurity (NIST, ISO 27001 Frameworks)
+                </p>
+            </div>
+
+            <div class="timeline-item" style="border-left: 4px solid var(--navy); padding-left: 2rem; margin-top: 2rem;">
+                <div class="timeline-header">
+                    <div>
+                        <div class="timeline-title">BSc Information Technology</div>
+                        <div class="timeline-company">St. Andrews College, Mumbai, India</div>
+                    </div>
+                    <div class="timeline-date">Jul 2018</div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <strong>Professional Certifications</strong>
+                <p style="margin-top: 0.5rem;">
+                    <strong>In Progress:</strong> IBM Data Engineering & Generative AI (90% Complete, Expected Jan 2025)<br>
+                    <strong>Completed:</strong> Cybersecurity Foundations: GRC • Vulnerability Management • Splunk for Security Analytics • Prompt Engineering for Generative AI<br>
+                    <strong>Planned:</strong> AWS Data Analytics Specialty • CDMP (Certified Data Management Professional)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto 3rem; opacity: 0.9;">
+            I am currently available for immediate start and open to Data Engineer, Data Governance, and GRC roles across the UK.
+        </p>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                    <a href="mailto:arvindswami014@gmail.com">arvindswami014@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">
+                    <a href="tel:07767978917">07767 978917</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">
+                    <a href="https://linkedin.com/in/arvindswami014" target="_blank">linkedin.com/in/arvindswami014</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">
+                    Church Stretton, UK<br>
+                    <small>(Open to Relocation)</small>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <a href="Arvind_Ganeshan_Data_Engineer.pdf" download class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+                <i class="fas fa-download"></i>
+                Download Full CV
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Arvind Swami Ganeshan. Data Engineer | UK Permanent Resident | Available Immediately.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+            Built with HTML & CSS. Ready to deploy on GitHub Pages or Netlify.
+        </p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add shadow to nav on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            }
+        });
+    </script>
+</body>
+</html>
