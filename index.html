@@ -100,15 +100,34 @@
             color: var(--accent-primary);
         }
 
-        .sponsorship-indicator {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-amber);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+        /* Download CV button in nav */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-nav {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
             font-weight: 600;
-            border: 1px solid rgba(245, 158, 11, 0.2);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
             font-family: 'JetBrains Mono', monospace;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-nav:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
         }
 
         .mobile-toggle {
@@ -711,6 +730,10 @@
                 display: block;
             }
 
+            .nav-actions {
+                display: none; /* Hide download button on mobile menu */
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -768,8 +791,10 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="sponsorship-indicator">
-                <i class="fas fa-passport"></i> Sponsorship Required
+            <div class="nav-actions">
+                <a href="Arvind_Ganeshan_Data_Engineer.pdf" download class="btn-nav">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
             <button class="mobile-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -801,7 +826,7 @@
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i> Discuss Opportunity
                     </a>
-                    <a href="Arvind_Ganeshan_CV.pdf" download class="btn btn-secondary">
+                    <a href="Arvind_Ganeshan_Data_Engineer.pdf" download class="btn btn-secondary">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
@@ -1169,69 +1194,4 @@
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                 <div class="contact-label">Email</div>
                 <div class="contact-value">
-                    <a href="mailto:arvindswami014@gmail.com">arvindswami014@gmail.com</a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                <div class="contact-label">Phone</div>
-                <div class="contact-value">
-                    <a href="tel:07767978917">07767 978917</a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                <div class="contact-label">LinkedIn</div>
-                <div class="contact-value">
-                    <a href="https://linkedin.com/in/arvindswami014" target="_blank">/in/arvindswami014</a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="contact-label">Location</div>
-                <div class="contact-value">
-                    Church Stretton, UK<br>
-                    <span style="font-size: 0.85rem; color: var(--text-muted);">(Open to relocation)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="sponsorship-banner">
-            <i class="fas fa-handshake"></i>
-            <div class="sponsorship-text">
-                <strong>Skilled Worker Visa Sponsorship Required</strong>
-                <span>Seeking UK employer sponsorship to return to Data Engineering sector. Willing to discuss flexible terms and contract-to-permanent arrangements. Available for immediate start.</span>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p style="font-family: 'JetBrains Mono', monospace; margin-bottom: 0.5rem;">
-            <span style="color: var(--accent-primary);">&lt;/&gt;</span> Arvind Swami Ganeshan
-        </p>
-        <p style="font-size: 0.85rem;">
-            MSc 2025 | Ex-BNP Paribas | Ex-Lexis Nexis | Data Engineer | GRC Specialist | Sponsorship Required | Available Now
-        </p>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                    <a href="mailto:arvindswami014@gmail.com">arvindswami014@gmail.com</
